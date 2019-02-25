@@ -10,7 +10,7 @@ spoiler: Mocking a node module function used inside another function under test 
 
 Lets start out with a file that imports a function from `lodash`. We will use this function to check if an object provided has a path and throw an error if the path isn't found.
 
-```index.js
+```javascript
 import has from 'lodash/has';
 
 export const requireProp = (obj, path) => {
@@ -26,7 +26,7 @@ We can consider `has()` to be a black box that will always work. With that consi
 1. `has()` returns `true` - no error should be thrown
 
 
-```index.test.js
+```javascript
 // Import `has` from lodash
 import has from 'lodash/has';
 // Import our function under test

@@ -35,7 +35,7 @@ import { requireProp } from './index';
 // Tell jest to mock the module
 jest.mock('lodash/has');
 
-test('error should be thrown in path not part of obj', () => {
+test('error should be thrown if path not part of obj', () => {
   // Tell `has` to return `false` no matter what
   has.mockReturnValueOnce(false);
   
@@ -43,7 +43,7 @@ test('error should be thrown in path not part of obj', () => {
   expect(() => requireProp({}, 'b')).toThrow();
 });
 
-test('no error should be thrown in path is part of obj', () => {
+test('error should not be thrown if path is part of obj', () => {
   // Tell `has` to return `true` no matter what.
   has.mockReturnValueOnce(true);
   

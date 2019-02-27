@@ -1,7 +1,7 @@
 ---
-title: Mocking a node module's function with Jest
+title: Mocking a lodash function with Jest
 date: '2019-02-25'
-spoiler: Mocking a node module function used inside another function under test with Jest.
+spoiler: Mocking a function from a node module used in a file under test.
 ---
 
 [Jest](https://jestjs.io) is a framework for testing JavaScript. In this, we will do a quick dive into how to mock a function from a node module that is used in our file under test.

@@ -4,16 +4,17 @@ import React from 'react'
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
-import profilePic from './profile-pic.jpg'
 import { rhythm } from '../utils/typography'
+
+const profileUrl = "https://res.cloudinary.com/brycehipp/image/upload/v1576308870/brycehipp.tech/me_green_rtlnqd.jpg"
 
 class Bio extends React.Component {
   render() {
     return (
       <div style={{ display: 'flex', marginBottom: rhythm(0.5) }}>
         <img
-          src={profilePic}
-          alt={'Bryce Hipp'}
+          src={profileUrl}
+          alt="Bryce Hipp"
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,

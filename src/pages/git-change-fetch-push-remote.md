@@ -8,7 +8,7 @@ The typical git workflow at my employer is to create branches off of the upstrea
 
 Keeping `master` updated with upstream in your local copy is fairly simple.
 
-```console
+```shell
 git pull --rebase upstream master
 ```
 
@@ -16,7 +16,7 @@ However, there is an even easier way that I've found works well for this workflo
 
 To do this, we need to update the fetch URL that git uses for the repo.
 
-```console
+```shell
 git remote set-url origin --fetch /path/to/upstream.git
 ```
 
@@ -24,7 +24,7 @@ git remote set-url origin --fetch /path/to/upstream.git
 
 Likewise, the push URL can be changed in almost the same fashion.
 
-```console
+```shell
 git remote set-url origin --push /new/path.git
 ```
 

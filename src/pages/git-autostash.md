@@ -21,5 +21,5 @@ git pull --rebase --autostash
 I went ahead and mapped this to an alias in zsh to make it easier to remember.
 
 ```shell
-alias gup="git pull --rebase --autostash`"
+alias gup="git pull --rebase --autostash"
 ```

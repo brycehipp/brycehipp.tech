@@ -231,3 +231,13 @@ pre[data-line] {
   float: left;
   min-width: 100%;
 }
+
+.tags .tag {
+  padding: 3px 7px;
+  background-color: #474749;
+  border-radius: 15%;
+}
+
+.tags .tag:not(:first-child) {
+  margin-left: 0.5rem;
+}

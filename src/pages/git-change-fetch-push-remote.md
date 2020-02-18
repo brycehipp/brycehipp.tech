@@ -2,6 +2,7 @@
 title: Change fetch/push URL for git remote
 date: '2019-01-02'
 spoiler: Changing the fetch/push URL for a single git remote.
+tags: 'git'
 ---
 
 The typical git workflow at my employer is to create branches off of the upstream remote's `master` branch, push those branches into your respective origin, and then create Pull Requests to the upstream's `master` branch.

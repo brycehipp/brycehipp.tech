@@ -21,6 +21,7 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO />
         {posts.map(({ node }) => {
+          const post = node.frontmatter
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
             <div key={node.fields.slug}>
@@ -34,12 +35,24 @@ class BlogIndex extends React.Component {
                 </Link>
               </h3>
               <small>
-                {node.frontmatter.date}
+                {post.date}
                 {` • ${formatReadingTime(node.timeToRead)}`}
               </small>
-              <p
-                dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
-              />
+              {post.tags ? (
+                <div>
+                  <small className="tags">
+                    {post.tags
+                      .split(',')
+                      .filter(tag => tag.trim())
+                      .map(tag => (
+                        <span className="tag">{tag}</span>
+                      ))}
+                  </small>
+                </div>
+              ) : (
+                ''
+              )}
+              <p dangerouslySetInnerHTML={{ __html: post.spoiler }} />
             </div>
           )
         })}
@@ -69,6 +82,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             spoiler
+            tags
           }
         }
       }

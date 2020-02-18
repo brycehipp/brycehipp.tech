@@ -1,7 +1,7 @@
 ---
-title: Git - Automatically stash changes before pull
+title: Automatically stash changes before pull
 date: '2020-01-26'
-spoiler: Running `git pull --autostash` will automatically stash changes before pulling from a remote.
+spoiler: Automatically stash your changes while pulling via --autostash.
 tags: 'git'
 ---
 

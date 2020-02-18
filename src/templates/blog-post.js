@@ -14,6 +14,7 @@ const GITHUB_REPO_NAME = 'brycehipp.tech'
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
+    const postData = post.frontmatter
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const { previous, next, slug } = this.props.pageContext
     const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/blob/master/src/pages/${slug.replace(
@@ -23,11 +24,11 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.spoiler}
+          title={postData.title}
+          description={postData.spoiler}
           slug={post.fields.slug}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h1>{postData.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),
@@ -36,8 +37,22 @@ class BlogPostTemplate extends React.Component {
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date}
+          {postData.date}
           {` • ${formatReadingTime(post.timeToRead)}`}
+          {postData.tags ? (
+            <div>
+              <small className="tags">
+                {postData.tags
+                  .split(',')
+                  .filter(tag => tag.trim())
+                  .map(tag => (
+                    <span className="tag">{tag}</span>
+                  ))}
+              </small>
+            </div>
+          ) : (
+            ''
+          )}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <p>
@@ -92,6 +107,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         spoiler
+        tags
       }
       fields {
         slug

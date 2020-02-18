@@ -2,6 +2,7 @@
 title: Git - Automatically stash changes before pull
 date: '2020-01-26'
 spoiler: Running `git pull --autostash` will automatically stash changes before pulling from a remote.
+tags: 'git'
 ---
 
 I'll want to update my feature branch with changes that other contributors have made to the same branch. When I'm in the middle of a feature and don't want to commit yet, I'll stash my changes, pull from the remote (with --rebase), and the reapply my stash.

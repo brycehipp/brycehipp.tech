@@ -39,8 +39,9 @@ class BlogPostTemplate extends React.Component {
         >
           {postData.date}
           {` • ${formatReadingTime(post.timeToRead)}`}
-          {postData.tags ? (
-            <div>
+          {postData.tags.length && (
+            <span>
+              <br />
               <small className="tags">
                 {postData.tags
                   .split(',')
@@ -49,9 +50,7 @@ class BlogPostTemplate extends React.Component {
                     <span className="tag">{tag}</span>
                   ))}
               </small>
-            </div>
-          ) : (
-            ''
+            </span>
           )}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

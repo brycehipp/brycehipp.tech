@@ -1,7 +1,7 @@
 ---
 title: Mocking a lodash function with Jest
 date: '2019-02-25'
-spoiler: Mocking a function from a node module used in a file under test.
+spoiler: How to mock a function from a node module used in a file under test.
 tags: 'javascript,jest'
 ---
 

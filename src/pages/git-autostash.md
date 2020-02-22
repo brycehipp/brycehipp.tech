@@ -1,7 +1,7 @@
 ---
 title: Automatically stash changes before pull
 date: '2020-01-26'
-spoiler: Automatically stash your changes while pulling via --autostash.
+spoiler: Automatically stash your changes during a git pull with autostash.
 tags: 'git'
 ---
 

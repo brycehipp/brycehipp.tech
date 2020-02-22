@@ -1,7 +1,7 @@
 ---
 title: Change fetch/push URL for git remote
 date: '2019-01-02'
-spoiler: Changing the fetch/push URL for a single git remote.
+spoiler: Configure a git remote to pull from one url URL but push to a different URL.
 tags: 'git'
 ---
 

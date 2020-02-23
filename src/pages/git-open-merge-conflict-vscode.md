@@ -13,6 +13,9 @@ Here is a one line command that can be ran at the root of the repository that wi
 git diff --name-only | uniq | xargs code
 ```
 
-This command is does 3 things. It gets a list of file names (using `--name-only`) that have conflicts, pipes to `uniq` to get a unique list, and then proves them as arguments to VS Code to open via `xargs`.
+This command is does 3 things:
+* Gets a list of file names, using `--name-only`, that have conflicts
+* Filters down to a unqiue list with `uniq`
+* Opens the files in VS Code
 
 I've aliased this to `git.fix` for ease of use during those pesky conflict resolutions.

@@ -24,3 +24,7 @@ Reload with new alias
 ```bash
 . ~/.bashrc
 ```
+
+## More Info
+
+https://firebog.net/

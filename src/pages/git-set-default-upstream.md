@@ -5,7 +5,7 @@ spoiler: Setting the default upstream for a git repository.
 tags: 'git'
 ---
 
-Setting the default upstream for a git repo is simple. Git has a `--set-upstream` (`-u` for short) flag that allows us to set/change where git will push by default.
+Setting the default upstream for a git repo is simple. Git has a `--set-upstream` (`-u` for short) flag that allows us to set where git will push by default.
 
 The syntax for this is as follows.
 

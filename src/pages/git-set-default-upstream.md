@@ -9,22 +9,22 @@ Setting the default upstream for a git repo is simple. Git has a `--set-upstream
 
 The syntax for this is as follows.
 
-```sh
+```bash
 git push -u <remote_name> <local_branch_name>:<corresponding_remote_branch_name>
 ```
 
-```sh
+```bash
 # Example
 git push -u origin master:master
 ```
 
 We can shorten this if the remote's branch name is the same as what it is locally.
 
-```sh
+```bash
 git push -u <remote_name> <local_branch_name>
 ```
 
-```sh
+```bash
 # Example
 git push -u origin master
 ```

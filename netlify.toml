@@ -12,3 +12,6 @@
 
   # Default build command.
   command = "gatsby build"
+
+[[plugins]]
+package = "netlify-plugin-gatsby-cache"
